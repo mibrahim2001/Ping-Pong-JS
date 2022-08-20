@@ -1,16 +1,16 @@
-#gameContainer{
+#gameContainer {
     text-align: center;
 }
-#gameBoard{
+#gameBoard {
     border: 6px solid;
     border-color: whitesmoke;
 }
-#scoreText{
+#scoreText {
     font-family: "consolas", monospace;
     font-size: 80px;
-    color: #D6D5A8;
+    color: #d6d5a8;
 }
-#resetBtn{
+#resetBtn {
     font-family: "Permanent Marker", cursive;
     font-size: 22px;
     width: 100px;
@@ -18,20 +18,20 @@
     border: 4px solid;
     border-radius: 15px;
     cursor: pointer;
-    background-color: #D6D5A8;
+    background-color: #d6d5a8;
 }
 
-#outDiv{
+#outDiv {
     text-align: center;
 }
 
-.playerInstructions{
+.playerInstructions {
     font-family: cursive;
-    color: #D6D5A8;
+    color: #d6d5a8;
     font-weight: bold;
     font-size: 22px;
 }
 
-body{
-    background-color: #1B2430;
+body {
+    background-color: #1b2430;
 }
