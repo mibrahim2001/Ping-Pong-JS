@@ -51,7 +51,7 @@ window.addEventListener(
                 "ArrowDown",
                 "ArrowLeft",
                 "ArrowRight",
-            ].indexOf(e.code) > -1
+            ].indexOf(e.key) > -1
         ) {
             e.preventDefault();
         }
@@ -76,7 +76,6 @@ function showStartInstructions() {
 
 //function to check if to start the game
 function checkForStartGame(event) {
-    console.log(event.keyCode);
     if (event.keyCode == 13) {
         resetGame();
     }
@@ -144,7 +143,7 @@ function drawPaddles() {
 function createBall() {
     ballSpeed = 1;
 
-    //we will take random value between 0 and 1 to decide if the ball will go 
+    //we will take random value between 0 and 1 to decide if the ball will go
     //towards player 1 or player 2 and either upwards or downwards
     if (Math.round(Math.random()) == 1) {
         ballXDirection = 1;
@@ -190,7 +189,7 @@ function checkCollision() {
         ballYDirection *= -1;
     }
 
-    //if ball goes out of table 
+    //if ball goes out of table
     if (ballX <= 0) {
         player2Score++;
         updateScore();
@@ -260,11 +259,10 @@ function updateScore() {
     scoreText.textContent = `${player1Score} : ${player2Score}`;
 }
 
-
 //a function to check for the winner
 function checkForWinner() {
-    //in table tennis game point is at 10 but a player can only 
-    //win the game if he/she is atleast two points ahead of other player 
+    //in table tennis game point is at 10 but a player can only
+    //win the game if he/she is atleast two points ahead of other player
     if (player1Score > 10 && player1Score >= player2Score + 2) {
         showWinner("Player 1");
     } else if (player2Score > 10 && player2Score >= player1Score + 2) {
